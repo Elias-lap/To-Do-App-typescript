@@ -8,9 +8,9 @@ const App:React.FC= ()=> {
      const [ NewToDo ,setNewToDo] =useState<{id:string , text:string}[]>([])
 
 
-function todoAddHandel(item:string){
+function todoAddHandel(item:string ,){
      setNewToDo([...NewToDo,{id:Math.random().toString(),text:item}])
-     console.log(item)
+     
 }
 function DELETEItem(itemId:string){
   const NewArry=NewToDo.filter((todo)=>

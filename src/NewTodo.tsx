@@ -9,15 +9,16 @@ const NewTodo: React.FC <NewTODO> = (props) => {
   const HandelSubmit = (event: React.FormEvent) => {
     event.preventDefault();
    const valueINput= typeInput.current!.value;
-  
    props.todoAddHandel(valueINput)
+   typeInput.current!.value = ''
+  
   };
 
   return (
     <form onSubmit={HandelSubmit} className="form-control">
       <label htmlFor="Todo">To Do List</label>
       <input type="text" id="Todo" ref={typeInput} />
-      <button type="submit">Add TODO</button>
+      <button type="submit">Add ToDo</button>
      
     </form>
   );
